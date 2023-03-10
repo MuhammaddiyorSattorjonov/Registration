@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/registrWindow">
+
+    <fragment
+        android:id="@+id/registrWindow"
+        android:name="com.example.registration.RegistrWindow"
+        android:label="fragment_registr_window"
+        tools:layout="@layout/fragment_registr_window" >
+        <action
+            android:id="@+id/action_registrWindow_to_userAddWindow"
+            app:destination="@id/userAddWindow" />
+        <action
+            android:id="@+id/action_registrWindow_to_usersList"
+            app:destination="@id/usersList" />
+    </fragment>
+    <fragment
+        android:id="@+id/userAddWindow"
+        android:name="com.example.registration.UserAddWindow"
+        android:label="fragment_user_add_window"
+        tools:layout="@layout/fragment_user_add_window" >
+        <action
+            android:id="@+id/action_userAddWindow_to_usersList"
+            app:destination="@id/usersList" />
+    </fragment>
+    <fragment
+        android:id="@+id/usersList"
+        android:name="com.example.registration.UsersList"
+        android:label="fragment_users_list"
+        tools:layout="@layout/fragment_users_list" />
+</navigation>
